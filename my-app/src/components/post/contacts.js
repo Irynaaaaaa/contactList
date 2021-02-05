@@ -5,12 +5,9 @@ import Search from './search'
 export default class Contacts extends Component{
     
     state = {
-        active : true,
-    }
-
-   
+        active : true
+    } 
       
-
     render(){
                
             return (
@@ -23,8 +20,5 @@ export default class Contacts extends Component{
                     </div>
                 </div>
             );
-       
-        
-
     }
 }
