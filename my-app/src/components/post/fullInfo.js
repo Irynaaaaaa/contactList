@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-
-
 export default class Contact extends Component{
 
     state = {
@@ -17,7 +15,7 @@ export default class Contact extends Component{
         
         return(
             <div className = 'contact' onClick = {this.onContactClick}>
-               <div>{this.props.lastName}</div>
+                 <div>{this.props.lastName}</div>
                {this.state.active &&
                <div className = 'contact'>
                    <p> name : {this.props.firstName}</p> 
