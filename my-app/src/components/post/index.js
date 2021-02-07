@@ -21,7 +21,7 @@ import Search from './search';
           }, {
             firstName: "Аномный",
             lastName: "Анонимус",
-            phone: "+380666666666"
+            phone: "+380666666666",
           }, {
             firstName: "Лилия",
             lastName: "Олдровна",
@@ -82,19 +82,19 @@ import Search from './search';
         
      let filtered =  array.filter(item => {
         if(!this.state.man){    
-        return item.gender === 'female'
+        return item.gender === 'male'
         
       }
        if(!this.state.woman){
-          return item.gender === 'male'        
+          return (item.gender === 'female' )      
         }
         if(!this.state.unknown){
-            return item.hasOwnProperty('gender')        
+            return item.hasOwnProperty('gender')
           }
-         return (item.hasOwnProperty('gender')) 
+         return (true ) 
     
     }) 
-       
+       console.log(this.state)
         return (
 
            <div className = 'container'>
@@ -111,11 +111,3 @@ import Search from './search';
 }
 export default MainForm;
 
-
-
-  /* 
-        if(!this.state.unknown){
-            array = this.state.contacts.filter(item => {
-           return item.gender === '-';
-            })
-         }*/
